@@ -452,6 +452,7 @@ module SitemapGenerator
     def finalize_sitemap!
       return if sitemap.finalized? || sitemap.empty? && @created_group
       add_default_links if !@added_default_links && !@created_group
+      binding.pry
       # This will finalize it.  We add to the index even if not creating an index because
       # the index keeps track of how many links are in our sitemaps and we need this info
       # for the summary line.  Also the index determines which file gets the first name
